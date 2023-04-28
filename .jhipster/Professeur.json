@@ -1,0 +1,39 @@
+{
+  "changelogDate": "20230418112148",
+  "dto": "mapstruct",
+  "fields": [
+    {
+      "fieldName": "grade",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "specialite",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "typecontrat",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "annecontrat",
+      "fieldType": "String"
+    }
+  ],
+  "jpaMetamodelFiltering": false,
+  "name": "Professeur",
+  "pagination": "pagination",
+  "readOnly": false,
+  "relationships": [
+    {
+      "id": false,
+      "otherEntityField": "login",
+      "otherEntityName": "user",
+      "otherEntityRelationshipName": "professeur",
+      "ownerSide": true,
+      "relationshipName": "user",
+      "relationshipType": "one-to-one",
+      "relationshipValidateRules": ["required"]
+    }
+  ],
+  "service": "serviceClass"
+}

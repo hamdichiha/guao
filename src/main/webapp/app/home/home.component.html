@@ -1,0 +1,27 @@
+<div class="row">
+  <div class="col-md-3">
+    <span class="hipster img-fluid rounded"></span>
+  </div>
+
+  <div class="col-md-9">
+    <div class="d-flex align-items-center justify-content-center">
+      <h3><span>WELCOME TO THE NOUR EL MAAREF APPLICATION</span></h3>
+    </div>
+    <div class="d-flex align-items-center justify-content-center">
+      <h5><span>This interface allows you to manage NOUR EL MAAREF SCHOOL</span></h5>
+    </div>
+
+    <div [ngSwitch]="account !== null">
+      <div class="alert alert-success" *ngSwitchCase="true">
+        <span id="home-logged-message" *ngIf="account">You are logged in as user "{{ account.login }}".</span>
+      </div>
+
+      <div class="alert alert-warning" *ngSwitchCase="false" align="center">
+        <span>You don't have an account yet?</span>&nbsp;
+        <a class="alert-link" routerLink="account/register">Register a new account</a>
+      </div>
+    </div>
+  </div>
+
+  <jhi-bar-chart></jhi-bar-chart>
+</div>
